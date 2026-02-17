@@ -1,8 +1,8 @@
 import "./card.css";
 
-function Card({ image, title, owner, category, profileImage }) {
+function Card({ image, title, owner, category, profileImage, variant }) {
   return (
-    <div className="card">
+    <div className={`card ${variant === "large" ? "card-large" : ""}`}>
       <div className="card-thumbnail">
         <img src={image} alt={title} />
       </div>
