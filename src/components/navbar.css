@@ -52,10 +52,164 @@
 }
 
 /* Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .profile-pic {
   width: 36px;
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
+  position: relative;
+}
+
+/* Profile Menu */
+.profile-menu {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.profile-menu img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  width: 150px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+}
+
+.profile-menu:hover .profile-dropdown {
+  display: flex;
+}
+
+.profile-dropdown p {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-link {
+  color: #000b18;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #000b18;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.auth-link:hover {
+  background-color: #000b18;
+  color: #fff;
+}
+
+/* Loading State */
+.loading {
+  font-size: 14px;
+  color: #555;
+}
+/* Register Business Button */
+.register-business-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000b18;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  white-space: nowrap;
+}
+
+.register-business-btn:hover {
+  background-color: #002048;
+}
+
+/* Improve Profile Menu Layout */
+.profile-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 12px;
+  width: 180px;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 200;
+}
+
+.profile-menu:hover .profile-dropdown {
+  display: flex;
+}
+
+.profile-dropdown p {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.profile-dropdown button {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.profile-dropdown button:hover {
+  text-decoration: underline;
+}
+
+/* Auth button upgrade */
+.auth-link.primary {
+  background-color: #000b18;
+  color: white;
+}
+
+.auth-link.primary:hover {
+  background-color: #002048;
+  color: white;
 }
