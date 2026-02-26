@@ -3,10 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./navbar.css";
 
-function Navbar() {
+function Navbar({ onSearch }) {
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -18,9 +19,7 @@ function Navbar() {
 
     axios
       .get("http://localhost:8081/api/v1/user/profile-info", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+        headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
         if (response.data.status === "00") {
@@ -40,23 +39,36 @@ function Navbar() {
     navigate("/login");
   };
 
+  const handleSearch = () => {
+    if (!keyword.trim()) return;
+    onSearch(keyword);
+  };
+
   return (
     <div className="navbar">
       {/* Left */}
       <div className="navbar-left">
         <div className="logo" onClick={() => navigate("/")}>
-          N
-        </div>
+  <span className="logo-short">N</span>
+  <span className="logo-full">Neighbourly</span>
+</div>
       </div>
 
       {/* Center */}
       <div className="navbar-center">
         <input
           type="text"
-          placeholder=" Find Anything In Redemption City"
+          placeholder="Find Anything In Redemption City"
           className="search-input"
+          value={keyword}
+          onChange={(e) => setKeyword(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") handleSearch();
+          }}
         />
-        <button className="search-btn">Search</button>
+        <button className="search-btn" onClick={handleSearch}>
+          Search
+        </button>
       </div>
 
       {/* Right */}
@@ -65,7 +77,6 @@ function Navbar() {
           <div className="loading">Loading...</div>
         ) : user ? (
           <>
-            {/* Register Business Button */}
             <button
               className="register-business-btn"
               onClick={() => navigate("/register-business")}
@@ -73,7 +84,6 @@ function Navbar() {
               Register Your Business
             </button>
 
-            {/* Profile */}
             <div className="profile-menu">
               <img
                 src={
@@ -100,7 +110,7 @@ function Navbar() {
               Login
             </Link>
             <Link to="/register" className="auth-link primary">
-              Create Account
+              Add Your Business
             </Link>
           </div>
         )}

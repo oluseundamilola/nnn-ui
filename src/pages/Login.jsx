@@ -66,7 +66,7 @@ function Login() {
     <div className="login-container">
       <div className="login-left">
         <img
-          src="https://i.pinimg.com/1200x/e5/d9/8e/e5d98ecef5641354df561462e73eec5f.jpg"
+          src="../public/login.jpg"
           alt="Community"
         />
       </div>
@@ -74,7 +74,7 @@ function Login() {
       <div className="login-right">
         <div className="login-box">
           <h1 className="login-title">
-            Login into <span>Neighbourlly</span>
+            Login into <span>Neighbourly</span>
           </h1>
 
           <form className="login-form" onSubmit={handleSubmit}>

@@ -1,41 +1,44 @@
 .category-tabs {
   display: flex;
-  gap: 12px;
-  padding: 12px 24px;
+  gap: 14px;
+  padding: 14px 40px;
   overflow-x: auto;
   background-color: #ffffff;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .category-tabs::-webkit-scrollbar {
   display: none;
 }
 
-/* Base button */
 .category-btn {
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 18px;
+  border-radius: 24px;
   border: none;
-  background-color: #f2f2f2;
+  background-color: #f3f4f6;
   cursor: pointer;
   white-space: nowrap;
   font-size: 14px;
-  transition: all 0.2s ease;
-  color: #333;
+  transition: 0.2s ease;
 }
 
-/* Hover */
 .category-btn:hover {
   background-color: #e4e6eb;
 }
 
-/* ACTIVE STATE (Facebook Blue) */
 .category-btn.active {
-  background-color: #000b18; /* Facebook blue */
-  color: #ffffff;
-  font-weight: 500;
+  background-color: #000b18;
+  color: white;
 }
 
-.category-btn.active:hover {
-  background-color: #000000;
+/* MOBILE */
+@media (max-width: 768px) {
+  .category-tabs {
+    padding: 12px 16px;
+  }
+
+  .category-btn {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
 }

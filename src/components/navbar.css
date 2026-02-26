@@ -2,149 +2,73 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
+  padding: 14px 40px;
   background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #eaeaea;
 }
 
-/* Left */
+/* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
+ font-size: 22px;
+  font-weight: 700;
   background-color: #000b18;
   color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
   cursor: pointer;
 }
+.logo-full {
+  display: none;
+}
+.logo-short {
+  display: inline;
+}
 
-/* Center */
+/* CENTER SEARCH */
 .navbar-center {
   display: flex;
   align-items: center;
-  width: 40%;
+  width: 45%;
 }
 
 .search-input {
   flex: 1;
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px 0 0 20px;
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 25px 0 0 25px;
   outline: none;
+  font-size: 14px;
 }
 
 .search-btn {
-  padding: 8px 16px;
-  border: 1px solid #ccc;
-  border-left: none;
-  border-radius: 0 20px 20px 0;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0 25px 25px 0;
   background-color: #000b18;
   color: white;
   cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
 }
 
 .search-btn:hover {
   background-color: #002048;
-  color: white;
 }
 
-/* Right */
+/* RIGHT */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
-.profile-pic {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  object-fit: cover;
-  cursor: pointer;
-  position: relative;
-}
-
-/* Profile Menu */
-.profile-menu {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-.profile-menu img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-}
-
-.profile-dropdown {
-  display: none;
-  position: absolute;
-  top: 45px;
-  right: 0;
-  background-color: #ffffff;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  width: 150px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  gap: 8px;
-  padding: 12px;
-}
-
-.profile-menu:hover .profile-dropdown {
-  display: flex;
-}
-
-.profile-dropdown p {
-  margin: 0;
-  font-weight: 600;
-  color: #333;
-}
-
-.profile-dropdown button {
-  background: none;
-  border: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 14px;
-  padding: 6px 0;
-}
-
-
-/* Auth Buttons */
-.auth-buttons {
-  display: flex;
-  gap: 12px;
-}
-
-.auth-link {
-  color: #000b18;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid #000b18;
-  border-radius: 20px;
-  transition: background-color 0.2s;
-}
-
-.auth-link:hover {
-  background-color: #000b18;
-  color: #fff;
-}
-
-/* Loading State */
-.loading {
-  font-size: 14px;
-  color: #555;
-}
-/* Register Business Button */
+/* Register Button */
 .register-business-btn {
-  padding: 8px 16px;
-  border-radius: 20px;
+  padding: 10px 18px;
+  border-radius: 24px;
   border: none;
   background-color: #000b18;
   color: white;
@@ -158,26 +82,33 @@
   background-color: #002048;
 }
 
-/* Improve Profile Menu Layout */
+/* PROFILE */
+.profile-pic {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
 .profile-menu {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Dropdown */
 .profile-dropdown {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 55px;
   right: 0;
   background: white;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 12px;
-  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 14px;
+  width: 200px;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   z-index: 200;
 }
 
@@ -185,31 +116,82 @@
   display: flex;
 }
 
-.profile-dropdown p {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
 .profile-dropdown button {
   background: none;
   border: none;
-  padding: 6px 0;
   text-align: left;
   cursor: pointer;
   font-size: 14px;
 }
 
-.profile-dropdown button:hover {
-  text-decoration: underline;
+/* AUTH */
+.auth-buttons {
+  display: flex;
+  gap: 14px;
 }
 
-/* Auth button upgrade */
+.auth-link {
+  color: #000b18;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #000b18;
+  border-radius: 22px;
+  transition: 0.2s ease;
+}
+
 .auth-link.primary {
   background-color: #000b18;
   color: white;
 }
 
-.auth-link.primary:hover {
-  background-color: #002048;
+.auth-link:hover {
+  background-color: #000b18;
   color: white;
+}
+
+/* ========================= */
+/* MOBILE NAVBAR */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* Mobile Logo Change */
+.logo-short {
+  display: none;
+}
+
+.logo-full {
+  display: inline;
+}
+
+  .navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .navbar-center {
+    width: 100%;
+  }
+
+  .search-input {
+    font-size: 16px; /* prevents zoom on iOS */
+  }
+
+  .navbar-right {
+    justify-content: space-between;
+  }
+
+  .register-business-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+
 }

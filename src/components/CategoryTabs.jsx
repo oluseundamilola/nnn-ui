@@ -1,31 +1,47 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./categoryTabs.css";
 
-function CategoryTabs() {
-  const categories = [
-    "All",
-    "Tech",
-    "Food",
-    "Home Service",
-    "Fashion",
-    "Health",
-    "Education",
-    "Automobile",
-  ];
-
+function CategoryTabs({ onCategoryChange }) {
+  const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("All");
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:8081/api/v1/business/get-category")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === "00") {
+          setCategories([{ id: 0, category: "All" }, ...data.data]);
+        }
+      })
+      .catch((err) => console.error("Failed to fetch categories", err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  const formatCategory = (cat) => {
+    return cat.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+  };
+
+  const handleClick = (category) => {
+    setActiveCategory(category);
+    if (onCategoryChange) {
+      onCategoryChange(category);
+    }
+  };
+
+  if (loading) return <div>Loading categories...</div>;
 
   return (
     <div className="category-tabs">
       {categories.map((cat) => (
         <button
-          key={cat}
+          key={cat.id}
           className={`category-btn ${
-            activeCategory === cat ? "active" : ""
+            activeCategory === cat.category ? "active" : ""
           }`}
-          onClick={() => setActiveCategory(cat)}
+          onClick={() => handleClick(cat.category)}
         >
-          {cat}
+          {formatCategory(cat.category)}
         </button>
       ))}
     </div>

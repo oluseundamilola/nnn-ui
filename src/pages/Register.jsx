@@ -106,7 +106,7 @@ if (formData.email.trim() !== "") {
     <div className="register-container">
       <div className="register-left">
         <img
-          src="https://i.pinimg.com/1200x/12/e5/40/12e54081d8427e0d93c89da23ba2d58f.jpg"
+          src= "../public/reg.jpg"
           alt="Community"
         />
       </div>
@@ -114,7 +114,7 @@ if (formData.email.trim() !== "") {
       <div className="register-right">
         <div className="register-box">
           <h1 className="register-title">
-            Create your <span>Neighbourlly</span> account
+            Create your <span>Neighbourly </span> account
           </h1>
 
           <form className="register-form" onSubmit={handleSubmit}>
@@ -125,7 +125,7 @@ if (formData.email.trim() !== "") {
                 <img
                   src={
                     preview ||
-                    "https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                    "../public/p.png"
                   }
                   alt="Profile Preview"
                 />
