@@ -37,7 +37,7 @@ function Login() {
         payload
       );
 
-      console.log("Backend message:", response.data.message);
+      console.log("BACKEND message:", response.data.message);
 
       if (response.data.status === "00") {
         // Save token
