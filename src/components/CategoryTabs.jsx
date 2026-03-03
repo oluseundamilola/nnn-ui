@@ -7,7 +7,7 @@ function CategoryTabs({ onCategoryChange }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8081/api/v1/business/get-category")
+    fetch(`${import.meta.env.VITE_API_BASE_URL}/business/get-category`)
       .then((res) => res.json())
       .then((data) => {
         if (data.status === "00") {

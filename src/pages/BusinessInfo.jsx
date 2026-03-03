@@ -16,7 +16,7 @@ function BusinessInfo() {
   const fetchBusiness = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8081/api/v1/business/get-business/${id}`
+        `${import.meta.env.VITE_API_BASE_URL}/business/get-business/${id}`
       );
 
       if (res.data.status === "00") {

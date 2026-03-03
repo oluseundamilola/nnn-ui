@@ -31,7 +31,7 @@ function Home() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:8081/api/v1/business/search-businesses?keyword=${keyword}&category=false&page=0`
+        `${import.meta.env.VITE_API_BASE_URL}/business/search-businesses?keyword=${keyword}&category=false&page=0`
       );
 
       if (res.data.status === "00") {
@@ -66,7 +66,7 @@ function Home() {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:8081/api/v1/business/search-businesses?keyword=${category}&category=true`
+        `${import.meta.env.VITE_API_BASE_URL}/business/search-businesses?keyword=${category}&category=true`
       );
       if (res.data.status === "00") {
         setCategoryResults(res.data.data.data);
@@ -85,7 +85,7 @@ function Home() {
     if (!token) return;
 
     axios
-      .get("http://localhost:8081/api/v1/business/user-businesses", {
+      .get(`${import.meta.env.VITE_API_BASE_URL}/business/user-businesses`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -281,10 +281,10 @@ function Home() {
                       title={business.title}
                       owner="You"
                       category={business.categoryName}
-                      profileImage={
-                        business.profilePictureUrl ||
-                        "../public/p.png"
-                      }
+                     profileImage={
+                            business.userImg ||
+                            "../public/p.png"
+                          }
                     />
                   ))}
                 </div>

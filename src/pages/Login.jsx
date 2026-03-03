@@ -33,7 +33,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8081/api/v1/user/authenticate",
+        `${import.meta.env.VITE_API_BASE_URL}/user/authenticate`,
         payload
       );
 

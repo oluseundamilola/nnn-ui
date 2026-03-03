@@ -31,7 +31,7 @@ function RegisterBusiness() {
   ============================== */
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/v1/user/profile-info", {
+      .get(`${import.meta.env.VITE_API_BASE_URL}/user/profile-info`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -47,7 +47,7 @@ function RegisterBusiness() {
   ============================== */
   useEffect(() => {
     axios
-      .get("http://localhost:8081/api/v1/business/get-category")
+      .get(`${import.meta.env.VITE_API_BASE_URL}/business/get-category`)
       .then((res) => {
         if (res.data.status === "00") {
           setCategories(res.data.data);
@@ -101,7 +101,7 @@ function RegisterBusiness() {
 
         try {
           const uploadRes = await axios.post(
-            "http://localhost:8081/api/v1/user/upload",
+            `${import.meta.env.VITE_API_BASE_URL}/user/upload`,
             profileData,
             {
               headers: {
@@ -134,7 +134,7 @@ function RegisterBusiness() {
       businessData.append("flyerImage", formData.flyerImage);
 
       const res = await axios.post(
-        "http://localhost:8081/api/v1/business/register-business",
+        `${import.meta.env.VITE_API_BASE_URL}/business/register-business`,
         businessData,
         {
           headers: {

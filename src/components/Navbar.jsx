@@ -18,7 +18,7 @@ function Navbar({ onSearch }) {
     }
 
     axios
-      .get("http://localhost:8081/api/v1/user/profile-info", {
+      .get(`${import.meta.env.VITE_API_BASE_URL}/user/profile-info`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {

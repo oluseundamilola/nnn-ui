@@ -72,7 +72,7 @@ if (formData.email.trim() !== "") {
       }
 
       const response = await axios.post(
-        "http://localhost:8081/api/v1/user/register",
+        `${import.meta.env.VITE_API_BASE_URL}/user/register`,
         data,
         {
           headers: {
@@ -114,7 +114,7 @@ if (formData.email.trim() !== "") {
       <div className="register-right">
         <div className="register-box">
           <h1 className="register-title">
-            Create your <span>Neighbourly </span> account
+            Create your <span>Neighbourly</span> account
           </h1>
 
           <form className="register-form" onSubmit={handleSubmit}>
