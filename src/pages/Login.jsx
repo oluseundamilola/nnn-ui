@@ -66,7 +66,7 @@ function Login() {
     <div className="login-container">
       <div className="login-left">
         <img
-          src="../public/login.jpg"
+          src="/login.jpg"
           alt="Community"
         />
       </div>

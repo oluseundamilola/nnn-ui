@@ -190,7 +190,7 @@ function Home() {
                   category={business.categoryName}
                   profileImage={
                     business.userImg ||
-                    "../public/p.png"
+                    "/p.png"
                   }
                 />
               ))}
@@ -213,7 +213,7 @@ function Home() {
                   category={business.categoryName}
                   profileImage={
                     business.userImg ||
-                    "../public/p.png"
+                    "/p.png"
                   }
                 />
               ))}
@@ -246,7 +246,7 @@ function Home() {
                         category={business.categoryName}
                         profileImage={
                           business.userImg ||
-                          "../public/p.png"
+                          "/p.png"
                         }
                       />
                     </div>
@@ -283,7 +283,7 @@ function Home() {
                       category={business.categoryName}
                      profileImage={
                             business.userImg ||
-                            "../public/p.png"
+                            "/p.png"
                           }
                     />
                   ))}
@@ -307,7 +307,7 @@ function Home() {
                           category={business.categoryName}
                           profileImage={
                             business.userImg ||
-                            "../public/p.png"
+                            "/p.png"
                           }
                         />
                       </div>
@@ -323,7 +323,7 @@ function Home() {
                       category={business.categoryName}
                       profileImage={
                         business.userImg ||
-                        "../public/p.png"
+                        "/p.png"
                       }
                     />
                   );

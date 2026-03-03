@@ -106,7 +106,7 @@ if (formData.email.trim() !== "") {
     <div className="register-container">
       <div className="register-left">
         <img
-          src= "../public/reg.jpg"
+          src= "/reg.jpg"
           alt="Community"
         />
       </div>
@@ -125,7 +125,7 @@ if (formData.email.trim() !== "") {
                 <img
                   src={
                     preview ||
-                    "../public/p.png"
+                    "/p.png"
                   }
                   alt="Profile Preview"
                 />
