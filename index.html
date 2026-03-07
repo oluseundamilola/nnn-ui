@@ -13,8 +13,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <title>Neighbourly</title>
+
+    <!-- Inline CSS to prevent dark mode -->
+    <style>
+      /* Force light mode even on Samsung / Android browsers */
+      html, body {
+        background-color: #f8f9fb !important;
+        color: #111 !important;
+      }
+
+      /* Override OS dark mode for elements */
+      @media (prefers-color-scheme: dark) {
+        html, body, input, textarea, select, button {
+          background-color: #f8f9fb !important;
+          color: #111 !important;
+        }
+      }
+    </style>
   </head>
-  <body style="background-color:#f8f9fb; color:#111; color-scheme: light;">
+  <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
