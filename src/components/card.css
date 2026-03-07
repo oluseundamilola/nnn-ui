@@ -10,7 +10,7 @@
 /* Hover effect */
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 86, 255, 0.12);
 }
 
 /* THUMBNAIL */
@@ -102,5 +102,5 @@
 
 .card-large:hover {
   transform: translateY(-10px);
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 18px 35px rgba(0, 86, 255, 0.18);
 }

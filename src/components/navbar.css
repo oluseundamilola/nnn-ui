@@ -12,9 +12,9 @@
 
 /* Logo */
 .logo {
- font-size: 22px;
+  font-size: 22px;
   font-weight: 700;
-  background-color: #000b18;
+  background-color: #0056ff;
   color: white;
   padding: 8px 14px;
   border-radius: 10px;
@@ -25,6 +25,7 @@
 }
 .logo-short {
   display: inline;
+
 }
 
 /* CENTER SEARCH */
@@ -47,7 +48,7 @@
   padding: 10px 20px;
   border: none;
   border-radius: 0 25px 25px 0;
-  background-color: #000b18;
+  background-color: #0056ff;
   color: white;
   cursor: pointer;
   font-size: 14px;
@@ -55,7 +56,7 @@
 }
 
 .search-btn:hover {
-  background-color: #002048;
+  background-color: #0044cc;
 }
 
 /* RIGHT */
@@ -70,7 +71,7 @@
   padding: 10px 18px;
   border-radius: 24px;
   border: none;
-  background-color: #000b18;
+  background-color: #0056ff;
   color: white;
   font-weight: 500;
   cursor: pointer;
@@ -79,7 +80,7 @@
 }
 
 .register-business-btn:hover {
-  background-color: #002048;
+  background-color: #0044cc;
 }
 
 /* PROFILE */
@@ -104,7 +105,7 @@
   right: 0;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(0, 86, 255, 0.1);
   padding: 14px;
   width: 200px;
   flex-direction: column;
@@ -122,6 +123,7 @@
   text-align: left;
   cursor: pointer;
   font-size: 14px;
+  color: #0056ff;
 }
 
 /* AUTH */
@@ -131,22 +133,22 @@
 }
 
 .auth-link {
-  color: #000b18;
+  color: #0056ff;
   font-weight: 500;
   text-decoration: none;
   padding: 8px 16px;
-  border: 1px solid #000b18;
+  border: 1px solid #0056ff;
   border-radius: 22px;
   transition: 0.2s ease;
 }
 
 .auth-link.primary {
-  background-color: #000b18;
+  background-color: #0056ff;
   color: white;
 }
 
 .auth-link:hover {
-  background-color: #000b18;
+  background-color: #0044cc;
   color: white;
 }
 
@@ -157,13 +159,13 @@
 @media (max-width: 768px) {
 
   /* Mobile Logo Change */
-.logo-short {
-  display: none;
-}
+  .logo-short {
+    display: none;
+  }
 
-.logo-full {
-  display: inline;
-}
+  .logo-full {
+    display: inline;
+  }
 
   .navbar {
     flex-direction: column;
@@ -177,7 +179,7 @@
   }
 
   .search-input {
-    font-size: 16px; /* prevents zoom on iOS */
+    font-size: 16px;
   }
 
   .navbar-right {

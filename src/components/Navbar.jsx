@@ -50,7 +50,7 @@ function Navbar({ onSearch }) {
       <div className="navbar-left">
         <div className="logo" onClick={() => navigate("/")}>
   <span className="logo-short">N</span>
-  <span className="logo-full">Neighbourly</span>
+  <span className="logo-full">neighbourly.ng</span>
 </div>
       </div>
 

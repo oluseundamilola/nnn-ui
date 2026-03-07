@@ -261,7 +261,7 @@ function Home() {
                     </p>
                     <div className="featured-contact">
                       Contact us to get your business featured:
-                      <strong> 09088874776</strong>
+                      <strong> 08153260295</strong>
                     </div>
                   </div>
                 </div>
